@@ -8,6 +8,8 @@ There 2 options:
       `cd AwesomeProject`
       `npx expo start`
 - ReactNative CLI. Tool provided to ReactNative tool. 
+## To restart app and reset cache
+- run `npx expo -- --reset-cache`
 
 ##Running on real device
 
@@ -24,6 +26,7 @@ Xcode (only for iOS)
 Documentations is here https://reactnavigation.org/
 
 - run `npm install @react-navigation/native`
+- install specific navigation  `npm install @react-navigation/native-stack`
 - if useExpo 
     run `npx expo install react-native-screens react-native-safe-area-context`
 -use App.js 
