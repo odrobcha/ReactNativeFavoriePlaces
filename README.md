@@ -155,3 +155,59 @@ import {Ionicons} from '@expo/vector-icons'
 
 ###Axios
 - install Axios `npm i axios`
+
+## Taking Camara
+Documentation https://docs.expo.dev/versions/latest/sdk/camera/
+- install `npx expo install expo-camera`
+
+##Location 
+Documentation https://docs.expo.dev/versions/latest/sdk/location/
+- install `npx expo install expo-location`
+- import {getCurrentLocationAsync} from 'expo-location'
+## Store data on device
+Documentation https://docs.expo.dev/develop/user-interface/store-data/
+
+
+## ImagePicker
+https://docs.expo.dev/versions/latest/sdk/imagepicker/
+- install `npx expo install expo-image-picker`
+- app.json Add permision 
+"plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
+    
+- In component we need camera 
+    - import {launchCameraAsync} from "expo-image-picker"
+    - const takeImage = ()=>{
+              launchCameraAsync({config});
+          };
+          
+          config can be found here https://docs.expo.dev/versions/latest/sdk/imagepicker/#imagepickeroptions
+
+
+###Goole maps preview
+Documentation https://developers.google.com/maps/documentation/maps-static
+
+### fuulscreen map preview
+Documentation https://docs.expo.dev/versions/latest/sdk/map-view/
+- install `npx expo install react-native-maps`
+- import MapView from 'react-native-maps';
+- add <View style={styles.container}>
+            <MapView style={styles.map} />
+          </View>
+
+
+
+
+### Google maps
+To get the address by Lat and Lng 
+https://developers.google.com/maps/documentation/geocoding/requests-reverse-geocoding
+
+
+### DB on device
+

@@ -5,8 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/places/PlaceForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/places/PlaceForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/places/PlaceItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/places/PlaceItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/places/PlasesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/places/PlasesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/place.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/place.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/AddPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddPlace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/AllPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AllPlaces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -37,6 +46,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -65,7 +76,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700217327477</updated>
-      <workItem from="1700217328593" duration="2567000" />
+      <workItem from="1700217328593" duration="22400000" />
+      <workItem from="1700562777036" duration="5005000" />
     </task>
     <servers />
   </component>
@@ -77,7 +89,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
