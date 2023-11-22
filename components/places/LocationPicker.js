@@ -7,10 +7,14 @@ import { useNavigation, useRoute, useIsFocused } from '@react-navigation/native'
 import { getCurrentPositionAsync, PermissionStatus, useForegroundPermissions } from 'expo-location';
 import { getAddress } from '../../util/location';
 
-const LocationPicker = ({onPickLocation}) => {
+import MapView, { Marker } from 'react-native-maps';
+
+const LocationPicker = ({ onPickLocation }) => {
+    const [initialRegion, setInitialRegion] = useState();
     const isFocused = useIsFocused();  //true if screen is focused, and false - if screen is not Focused
     const route = useRoute();
-
+    const navigation = useNavigation();
+    const [pickedLocation, setPickedLocation] = useState();
     useEffect(() => {
         if (isFocused && route.params) {
             //const mapPickedLocation = route.params ? {lat: route.params.pickedLat, lng : route.params.pickedLng}: null;
@@ -18,23 +22,27 @@ const LocationPicker = ({onPickLocation}) => {
                 lat: route.params.pickedLat,
                 lng: route.params.pickedLng
             };
+            setInitialRegion({
+                latitude: mapPickedLocation.lat,
+                longitude: mapPickedLocation.lng,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421
+            });
+
             setPickedLocation(mapPickedLocation);
+
         }
     }, [route, isFocused]);
 
 
 
-
-    const navigation = useNavigation();
-    const [pickedLocation, setPickedLocation] = useState();
-
-    useEffect(()=>{
-        const handleLocation = async () =>{
-            if(pickedLocation){
-               const address = await getAddress(pickedLocation.lat, pickedLocation.lng)
-                onPickLocation({...pickedLocation, address: address});
+    useEffect(() => {
+        const handleLocation = async () => {
+            if (pickedLocation) {
+                const address = await getAddress(pickedLocation.lat, pickedLocation.lng);
+                onPickLocation({ ...pickedLocation, address: address });
             }
-        }
+        };
         handleLocation();
 
     }, [pickedLocation, onPickLocation]);
@@ -60,11 +68,18 @@ const LocationPicker = ({onPickLocation}) => {
             return;
         }
         const location = await getCurrentPositionAsync();
+
+
+        setInitialRegion({
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421
+        });
         setPickedLocation({
             lat: location.coords.latitude,
             lng: location.coords.longitude
         });
-
 
     };
     const pickOnMapHandler = () => {
@@ -72,14 +87,23 @@ const LocationPicker = ({onPickLocation}) => {
     };
     let locationPrev = <Text>No location picked yet</Text>;
     if (pickedLocation) {
+        locationPrev = <View style={styles.mapPreview}>
+            <MapView
+              style={styles.map}
+              initialRegion={initialRegion}
+            >
 
-        locationPrev = <View>
-            {/* <Image
-              style={styles.image}
-              source={{ uri: getMapPreview(pickedLocation.lat, pickedLocation.lng) }}/>*/}
-            <Text>Lat: {pickedLocation.lat}</Text>
-            <Text>Lng: {pickedLocation.lng}</Text>
-        </View>;
+                <Marker
+                  title="Picked Location"
+                  coordinate={{
+                      latitude: pickedLocation.lat,
+                      longitude: pickedLocation.lng,
+                  }}
+                />
+
+            </MapView>
+            {/*<Text>No location picked yet</Text>;*/}
+        </View>
 
     }
 
@@ -101,6 +125,12 @@ const LocationPicker = ({onPickLocation}) => {
 export default LocationPicker;
 
 const styles = StyleSheet.create({
+    map: {
+        flex: 1,
+        borderWidth: 2,
+        width: '100%',
+        height: '100%'
+    },
     mapPreview: {
         width: '100%',
         height: 200,

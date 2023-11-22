@@ -78,3 +78,23 @@ export default function App () {
 }
 
 
+/*
+
+
+   <MapView
+          style={styles.map}
+          initialRegion={region}
+        >
+
+              <Marker
+                title="Picked Location"
+                coordinate={{
+                    latitude: pickedLocation.lat,
+                    longitude:pickedLocation.lng,
+                }}
+              />
+
+        </MapView>
+
+
+ */

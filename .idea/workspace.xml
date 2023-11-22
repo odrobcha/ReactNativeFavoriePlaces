@@ -4,17 +4,7 @@
     <list default="true" id="1b26cb91-1ca5-410b-bd44-9cb7f2cf2dab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/places/PlaceItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/places/PlaceItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/places/PlasesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/places/PlasesList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/place.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/place.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/AddPlace.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddPlace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/AllPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AllPlaces.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/PlaceDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/PlaceDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/places/LocationPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/places/LocationPicker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700217327477</updated>
       <workItem from="1700217328593" duration="22400000" />
-      <workItem from="1700562777036" duration="19377000" />
+      <workItem from="1700562777036" duration="21760000" />
     </task>
     <servers />
   </component>
