@@ -14,7 +14,7 @@ export async function getAddress(lat, lng) {
     const data = await response.json();
     let address;
     if (data.status === 'REQUEST_DENIED'){
-         address = "Rooskenstraat, 33, Gent";
+         address = "Unknown";
 
     } else {
         address = data.results[0].formatted_address;

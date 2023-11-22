@@ -209,5 +209,13 @@ To get the address by Lat and Lng
 https://developers.google.com/maps/documentation/geocoding/requests-reverse-geocoding
 
 
-### DB on device
+### DB on device - expo sqlite
+Documentation https://docs.expo.dev/versions/latest/sdk/sqlite/
+DB can be used on Android and iOS
+
+- install `npx expo install expo-sqlite`
+- in util folder - create database.js. to put here all the logic related to SQlite
+- const database = SQLite.openDatabase('places.db'); //the name of data to be created;
+- init()
+
 
